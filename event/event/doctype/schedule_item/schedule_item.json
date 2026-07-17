@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-17 12:11:24.385027",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "track",
+  "type",
+  "desciption",
+  "column_break_eabf",
+  "talk",
+  "start_time",
+  "end_time"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Talk\nBreak"
+  },
+  {
+   "columns": 2,
+   "fieldname": "talk",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Talk",
+   "mandatory_depends_on": "eval:doc.type==\"Talk\"",
+   "options": "Event Talk"
+  },
+  {
+   "columns": 2,
+   "fieldname": "track",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Track",
+   "options": "Event Track",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_eabf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "description": "Tea Break, Lunch, Etc.",
+   "fieldname": "desciption",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Desciption",
+   "mandatory_depends_on": "eval: doc.type != \"Talk\""
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-17 15:00:30.403781",
+ "modified_by": "Administrator",
+ "module": "Event",
+ "name": "Schedule Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
