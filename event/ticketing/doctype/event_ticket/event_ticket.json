@@ -10,6 +10,8 @@
   "column_break_tpgf",
   "ticket_type",
   "booking",
+  "qr_code",
+  "section_break_rjds",
   "amended_from"
  ],
  "fields": [
@@ -58,13 +60,23 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Attach Image",
+   "label": "QR Code "
+  },
+  {
+   "fieldname": "section_break_rjds",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
+ "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-20 12:21:06.782033",
+ "modified": "2026-07-20 14:25:35.648163",
  "modified_by": "Administrator",
  "module": "Ticketing",
  "name": "Event Ticket",
