@@ -149,9 +149,24 @@
    "group": "Sponsor",
    "link_doctype": "Event Sponsor",
    "link_fieldname": "event"
+  },
+  {
+   "group": "Ticket Type",
+   "link_doctype": "Event Ticket Type",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Booking",
+   "link_doctype": "Event Booking",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Ticket",
+   "link_doctype": "Event Ticket",
+   "link_fieldname": "event "
   }
  ],
- "modified": "2026-07-17 17:05:52.283983",
+ "modified": "2026-07-20 09:47:46.467321",
  "modified_by": "Administrator",
  "module": "Event",
  "name": "AX Event",
