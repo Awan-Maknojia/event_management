@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"JQwDSHecQM\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>CubeZix Events</b></span>\",\"col\":12}},{\"id\":\"56GcVVUl2r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Events\",\"col\":4}},{\"id\":\"2fi1UwuUCw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Event\",\"col\":4}},{\"id\":\"WyzPrjwTkH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Host\",\"col\":4}},{\"id\":\"WgUO9zt2TP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking\",\"col\":5}},{\"id\":\"i3C-6bDd_V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":5}},{\"id\":\"zNxUdPd1C_\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Events This Month\",\"col\":4}}]",
+ "content": "[{\"id\":\"JQwDSHecQM\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>CubeZix Events</b></span>\",\"col\":12}},{\"id\":\"56GcVVUl2r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Events\",\"col\":4}},{\"id\":\"2fi1UwuUCw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Event\",\"col\":4}},{\"id\":\"WyzPrjwTkH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Host\",\"col\":4}},{\"id\":\"WgUO9zt2TP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking\",\"col\":5}},{\"id\":\"i3C-6bDd_V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":5}},{\"id\":\"IYYLtrMh-Q\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Proposal</span>\",\"col\":12}},{\"id\":\"u3xgc9cU7P\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sponsorship Proposal\",\"col\":4}},{\"id\":\"6tuFu04YIh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Talk Proposal Received this week\",\"col\":4}},{\"id\":\"zNxUdPd1C_\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Events This Month\",\"col\":4}}]",
  "creation": "2026-07-18 10:45:29.772447",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Events",
  "links": [],
- "modified": "2026-07-20 11:59:15.828030",
+ "modified": "2026-07-20 16:00:52.186285",
  "modified_by": "Administrator",
  "module": "Event",
  "name": "Events",
@@ -31,6 +31,14 @@
  "roles": [],
  "sequence_id": 28.0,
  "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Talk Proposal Received this week",
+   "link_to": "Talk Proposal",
+   "stats_filter": "[[\"Talk Proposal\",\"creation\",\"Timespan\",\"this week\",false]]",
+   "type": "DocType"
+  },
   {
    "color": "Green",
    "doc_view": "List",
@@ -62,6 +70,14 @@
    "doc_view": "New",
    "label": "New Event",
    "link_to": "AX Event",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Sponsorship Proposal",
+   "link_to": "Sponsorship Proposal",
    "stats_filter": "[]",
    "type": "DocType"
   },

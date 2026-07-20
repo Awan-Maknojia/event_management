@@ -146,27 +146,42 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "group": "Sponsor",
+   "group": "Sponsorship ",
    "link_doctype": "Event Sponsor",
    "link_fieldname": "event"
   },
   {
-   "group": "Ticket Type",
+   "group": "Sponsorship ",
+   "link_doctype": "Sponsorship Tier",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Ticketing",
    "link_doctype": "Event Ticket Type",
    "link_fieldname": "event"
   },
   {
-   "group": "Booking",
+   "group": "Ticketing",
    "link_doctype": "Event Booking",
    "link_fieldname": "event"
   },
   {
-   "group": "Ticket",
+   "group": "Ticketing",
    "link_doctype": "Event Ticket",
    "link_fieldname": "event "
+  },
+  {
+   "group": "Proposal",
+   "link_doctype": "Talk Proposal",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Proposal",
+   "link_doctype": "Sponsorship Proposal",
+   "link_fieldname": "event"
   }
  ],
- "modified": "2026-07-20 12:17:13.465998",
+ "modified": "2026-07-20 15:49:32.339319",
  "modified_by": "Administrator",
  "module": "Event",
  "name": "AX Event",

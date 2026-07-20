@@ -21,6 +21,7 @@ class EventTicket(Document):
         qr_code: DF.AttachImage | None
         ticket_type: DF.Link | None
     # end: auto-generated types
+    
 
     def before_submit(self):
         self.generate_qr_code()

@@ -1,60 +1,64 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2026-07-17 17:01:19.424237",
+ "creation": "2026-07-20 15:21:19.675882",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "company_name",
-  "logo",
-  "column_break_rysu",
   "event",
+  "company__logo",
+  "column_break_hnai",
+  "status",
   "tier"
  ],
  "fields": [
   {
-   "fieldname": "logo",
-   "fieldtype": "Attach Image",
-   "label": "Logo",
-   "reqd": 1
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Review\nPending\nAccepted\nRejected"
   },
   {
-   "fieldname": "column_break_rysu",
+   "fieldname": "column_break_hnai",
    "fieldtype": "Column Break"
-  },
-  {
-   "allow_in_quick_entry": 1,
-   "fieldname": "event",
-   "fieldtype": "Link",
-   "label": "Event",
-   "options": "AX Event",
-   "reqd": 1
   },
   {
    "fieldname": "company_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Company Name",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "company__logo",
+   "fieldtype": "Attach Image",
+   "label": "Company  Logo",
    "reqd": 1
   },
   {
    "fieldname": "tier",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Tier",
    "options": "Sponsorship Tier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event",
+   "options": "AX Event",
    "reqd": 1
   }
  ],
  "grid_page_length": 50,
- "image_field": "logo",
+ "image_field": "company__logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-20 15:29:22.547921",
+ "modified": "2026-07-20 15:31:27.055165",
  "modified_by": "Administrator",
- "module": "Event",
- "name": "Event Sponsor",
- "naming_rule": "Set by user",
+ "module": "Proposal",
+ "name": "Sponsorship Proposal",
  "owner": "Administrator",
  "permissions": [
   {
@@ -70,11 +74,11 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "title_field": "company_name"
 }

@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class EventVenue(Document):
+class SponsorshipTier(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,6 +14,7 @@ class EventVenue(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		address: DF.SmallText
+		event: DF.Link
+		title: DF.Data
 	# end: auto-generated types
 	pass
