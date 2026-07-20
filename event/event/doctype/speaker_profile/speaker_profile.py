@@ -12,6 +12,7 @@ class SpeakerProfile(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from event.event.doctype.social_media_link.social_media_link import SocialMediaLink
 		from frappe.types import DF
 
 		company: DF.Data | None
@@ -20,6 +21,7 @@ class SpeakerProfile(Document):
 		display_name: DF.Data | None
 		featured: DF.Check
 		name: DF.Int | None
+		social_media_links: DF.Table[SocialMediaLink]
 		user: DF.Link
 	# end: auto-generated types
 	pass
