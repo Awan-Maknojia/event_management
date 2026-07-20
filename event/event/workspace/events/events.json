@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"JQwDSHecQM\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>CubeZix Events</b></span>\",\"col\":12}},{\"id\":\"56GcVVUl2r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Events\",\"col\":4}},{\"id\":\"2fi1UwuUCw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Event\",\"col\":4}},{\"id\":\"WyzPrjwTkH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Host\",\"col\":4}},{\"id\":\"zNxUdPd1C_\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Events This Month\",\"col\":4}}]",
+ "content": "[{\"id\":\"JQwDSHecQM\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>CubeZix Events</b></span>\",\"col\":12}},{\"id\":\"56GcVVUl2r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Events\",\"col\":4}},{\"id\":\"2fi1UwuUCw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Event\",\"col\":4}},{\"id\":\"WyzPrjwTkH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Host\",\"col\":4}},{\"id\":\"WgUO9zt2TP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking\",\"col\":5}},{\"id\":\"i3C-6bDd_V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":5}},{\"id\":\"zNxUdPd1C_\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Events This Month\",\"col\":4}}]",
  "creation": "2026-07-18 10:45:29.772447",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Events",
  "links": [],
- "modified": "2026-07-18 11:23:03.364244",
+ "modified": "2026-07-20 11:59:15.828030",
  "modified_by": "Administrator",
  "module": "Event",
  "name": "Events",
@@ -38,6 +38,23 @@
    "label": "Events",
    "link_to": "AX Event",
    "stats_filter": "[[\"AX Event\",\"published\",\"=\",1,false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} Done",
+   "label": "Booking",
+   "link_to": "Event Booking",
+   "stats_filter": "[[\"Event Booking\",\"docstatus\",\"=\",\"1\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Tickets",
+   "link_to": "Event Ticket",
+   "stats_filter": "[]",
    "type": "DocType"
   },
   {
