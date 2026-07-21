@@ -6,5 +6,10 @@ frappe.ui.form.on("AX Event", {
         frappe.call("frappe.geo.country_info.get_country_timezone_info").then(({ message }) => {
             frm.fields_dict.time_zone.set_data(message.all_timezones);
         });
+        const button_label = frm.doc.published ? __("Unpublish") : __("Publish");
+        frm.add_custom_button(__(button_label), function () {
+            frm.set_value("published", !frm.doc.published);
+            frm.save();
+        },);
     },
 });
