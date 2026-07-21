@@ -7,9 +7,10 @@
  "field_order": [
   "attendee_name",
   "event",
+  "booking",
   "column_break_tpgf",
   "ticket_type",
-  "booking",
+  "add_ons",
   "qr_code",
   "section_break_rjds",
   "amended_from"
@@ -69,6 +70,12 @@
   {
    "fieldname": "section_break_rjds",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "Add ons",
+   "options": "Ticket Add-on Value"
   }
  ],
  "grid_page_length": 50,
@@ -76,7 +83,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-20 14:25:35.648163",
+ "modified": "2026-07-21 10:26:30.662116",
  "modified_by": "Administrator",
  "module": "Ticketing",
  "name": "Event Ticket",

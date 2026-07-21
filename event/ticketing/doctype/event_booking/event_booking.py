@@ -31,13 +31,19 @@ class EventBooking(Document):
         self.total_amount = 0
 
         for attendee in self.attendee:
+            attendee.add_on_total = attendee.get_add_on_total()
             self.total_amount += attendee.amount
+            self.total_amount += attendee.add_on_total
+             
 
     def set_currency(self):
         self.currency = self.attendee[0].currency
         
     def on_submit(self):
         self.generate_tickets()
+    
+    # def after_save(self):
+    #     self.generate_tickets()
         
     def generate_tickets(self):
         for attendee in self.attendee:
@@ -46,6 +52,10 @@ class EventBooking(Document):
             ticket.booking = self.name
             ticket.ticket_type = attendee.ticket_type
             ticket.attendee_name = attendee.full_name
+            
+            if attendee.add_ons:
+                add_ons_list = frappe.get_cached_doc("Attendee Ticket Add-on" , attendee.add_ons).add_ons
+                ticket.add_ons = add_ons_list
             ticket.insert().submit()
             
     

@@ -179,9 +179,14 @@
    "group": "Proposal",
    "link_doctype": "Sponsorship Proposal",
    "link_fieldname": "event"
+  },
+  {
+   "group": "Ticketing",
+   "link_doctype": "Ticket Add-on",
+   "link_fieldname": "event"
   }
  ],
- "modified": "2026-07-20 15:49:32.339319",
+ "modified": "2026-07-21 08:39:28.742397",
  "modified_by": "Administrator",
  "module": "Event",
  "name": "AX Event",

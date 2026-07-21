@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-21 08:54:25.159151",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "add_ons",
+  "value",
+  "column_break_asrz",
+  "price",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_asrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Value",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "add_ons.price",
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "non_negative": 1,
+   "options": "currency"
+  },
+  {
+   "default": "AED",
+   "fetch_from": "add_ons.currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Add ons",
+   "options": "Ticket Add-on",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-21 10:21:20.683457",
+ "modified_by": "Administrator",
+ "module": "Ticketing",
+ "name": "Ticket Add-on Value",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
