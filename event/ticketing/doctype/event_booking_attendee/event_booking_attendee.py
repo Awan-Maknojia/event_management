@@ -20,6 +20,7 @@ class EventBookingAttendee(Document):
         currency: DF.Link
         email: DF.Data | None
         full_name: DF.Data | None
+        number_of_add_ons: DF.Int
         parent: DF.Data
         parentfield: DF.Data
         parenttype: DF.Data
@@ -36,3 +37,6 @@ class EventBookingAttendee(Document):
 
         add_ons = frappe.get_cached_doc("Attendee Ticket Add-on",self.add_ons).add_ons
         return sum(row.price for row in add_ons)
+    
+    def get_number_of_add_on(self):
+       	return len(frappe.get_cached_doc("Attendee Ticket Add-on",self.add_ons).add_ons)
