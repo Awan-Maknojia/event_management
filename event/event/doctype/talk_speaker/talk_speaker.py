@@ -5,15 +5,20 @@
 from frappe.model.document import Document
 
 
-class EventTrack(Document):
+class TalkSpeaker(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from event.event.doctype.social_media_link.social_media_link import SocialMediaLink
 		from frappe.types import DF
 
-		event: DF.Link
+		parent: DF.Data
+		parentfield: DF.Data
+		parenttype: DF.Data
+		social_media_link: DF.Table[SocialMediaLink]
+		speaker: DF.Link
 	# end: auto-generated types
 	pass

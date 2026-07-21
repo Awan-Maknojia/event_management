@@ -184,9 +184,14 @@
    "group": "Ticketing",
    "link_doctype": "Ticket Add-on",
    "link_fieldname": "event"
+  },
+  {
+   "group": "Genral",
+   "link_doctype": "Event Track",
+   "link_fieldname": "event"
   }
  ],
- "modified": "2026-07-21 08:39:28.742397",
+ "modified": "2026-07-21 16:06:57.728625",
  "modified_by": "Administrator",
  "module": "Event",
  "name": "AX Event",
