@@ -30,21 +30,32 @@ class EventTicket(Document):
 
     def generate_qr_code(self):
         # frappe.throw("HI")
-        import io
-        import qrcode
-
-        img = qrcode.make(f"{self.name}")
-        output = io.BytesIO()
-        img.save(output, format="PNG")
-        hex_data = output.getvalue()
-
-        qr_code_file =frappe.get_doc({
+       qr_data =make_qr_with_data(f"{self.name}")
+       qr_code_file =frappe.get_doc({
             "doctype":"File",
-            "content":hex_data,
+            "content":qr_data,
             "attached_to_doctype": "Event Ticket",
             "attached_to_name":self.name,
             "attached_to_field": "qrcode",
             "file_name": f"ticket-qr-code-{self.name}.png"
             }).save()
+       self.qr_code = qr_code_file.file_url
         
-        self.qr_code = qr_code_file.file_url
+        
+def make_qr_with_data(data: str) -> bytes:
+            import io
+            import qrcode
+            from qrcode.image.styledpil import StyledPilImage
+            from qrcode.image.styles.moduledrawers import HorizontalBarsDrawer
+            qr = qrcode.QRCode(
+                     version=1,
+                    error_correction=qrcode.constants.ERROR_CORRECT_L,
+                    box_size=10,
+                    border=4,
+                )
+            qr.add_data(data)
+            qr.make(fit=True)
+            img = qr.make_image(image_factory=StyledPilImage ,module_drawer=HorizontalBarsDrawer())
+            output = io.BytesIO()
+            img.save(output, format="PNG")
+            return output.getvalue()

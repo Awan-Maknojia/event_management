@@ -65,7 +65,8 @@
   {
    "fieldname": "qr_code",
    "fieldtype": "Attach Image",
-   "label": "QR Code "
+   "label": "QR Code ",
+   "no_copy": 1
   },
   {
    "fieldname": "section_break_rjds",
@@ -83,7 +84,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-21 10:26:30.662116",
+ "modified": "2026-07-21 16:36:58.734361",
  "modified_by": "Administrator",
  "module": "Ticketing",
  "name": "Event Ticket",
