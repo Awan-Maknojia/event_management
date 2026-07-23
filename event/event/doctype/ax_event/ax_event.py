@@ -34,9 +34,10 @@ class AXEvent(Document):
 	# end: auto-generated types
  
 	@frappe.whitelist()
-	def check_in(self, ticket_id: str):
+	def check_in(self, ticket_id: str, track: str|None = None):
     	 frappe.get_doc({
         	"doctype": "Event Check In",
         	"event": self.name,
-    		"ticket": ticket_id
+    		"ticket": ticket_id,
+    		"track": track
     	}).insert().submit()
