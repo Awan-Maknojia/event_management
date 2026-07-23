@@ -1,7 +1,7 @@
 # Copyright (c) 2026, Awan Maknojia and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 
@@ -32,4 +32,11 @@ class AXEvent(Document):
 		title: DF.Data
 		venue: DF.Link
 	# end: auto-generated types
-	pass
+ 
+	@frappe.whitelist()
+	def check_in(self, ticket_id: str):
+    	 frappe.get_doc({
+        	"doctype": "Event Check In",
+        	"event": self.name,
+    		"ticket": ticket_id
+    	}).insert().submit()

@@ -186,12 +186,17 @@
    "link_fieldname": "event"
   },
   {
-   "group": "Genral",
+   "group": "General",
    "link_doctype": "Event Track",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "General",
+   "link_doctype": "Event Check In",
    "link_fieldname": "event"
   }
  ],
- "modified": "2026-07-21 16:06:57.728625",
+ "modified": "2026-07-23 12:52:11.124444",
  "modified_by": "Administrator",
  "module": "Event",
  "name": "AX Event",

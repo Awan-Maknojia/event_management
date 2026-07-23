@@ -11,5 +11,19 @@ frappe.ui.form.on("AX Event", {
             frm.set_value("published", !frm.doc.published);
             frm.save();
         },);
+        frm.add_custom_button(__("Start Check In"), () => {
+            new frappe.ui.Scanner({
+                dialog: true,
+                multiple: false,
+                on_scan(data) {
+                const ticket_id = data.decodedText;
+                frm.call("check_in", {ticket_id}).then(() => {
+                    frappe.show_alert(__("Check In Complete!"))
+                    frm.refresh();
+                })
+                }
+            });
+        })
+
     },
 });
